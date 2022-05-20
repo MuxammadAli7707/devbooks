@@ -1,0 +1,58 @@
+
+.hero {
+  width: 100%;
+  padding-top: 54px;
+
+  &__div {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__list {
+    width: 1290px;
+    height: 350px;
+  }
+
+  &__main {
+    width: 100%;
+    background-image: url('../../assets/images/hero-back.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 21px;
+    padding: 45px 86px 100px;
+  }
+
+  &__div2 {
+    width: 1290px;
+  }
+
+  &__box {
+    width: 337px;
+  }
+
+  &__title {
+    font-family: 'Rotterburg Stylish FREE';
+    font-style: normal;
+    font-size: 61px;
+    line-height: 67px;
+    letter-spacing: 0.4px;
+    color: #c9ac8c;
+    margin-bottom: 10px;
+
+  }
+
+  &__btn {
+    width: 57.39px;
+    height: 3px;
+    background-color: #ffffff99;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  &__activ {
+    background-color: #fff;
+  }
+
+}

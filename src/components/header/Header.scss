@@ -1,0 +1,71 @@
+.header {
+  border: 1px solid #ffffff1a;
+
+  &__logo {
+    font-family: 'Rotterburg Stylish FREE';
+    font-style: normal;
+    font-size: 25px;
+    line-height: 144.4%;
+    text-decoration: none;
+    color: #c9ac8c;
+
+    &:hover {
+      color: #c9ac8c;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    padding: 29px 0;
+    margin-right: 44px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 144.4%;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s linear;
+
+    &:hover {
+      color: #ffffff9d;
+    }
+  }
+
+  &__activ {
+    border-bottom: 2px solid #fff;
+  }
+
+
+  &__btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+
+  &__btndown {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__icondown {
+    font-weight: 500;
+    font-size: 32px;
+    color: #ffffff80;
+  }
+
+}
