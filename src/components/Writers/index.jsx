@@ -10,14 +10,6 @@ import imgs from '../../assets/images/object/qodiriy.jpg'
 export default function Users() {
   let location = useLocation();
 
-{/* <div className="">
-{obj.map((item) => {
-  if(item.id === +location.pathname.split("/").at(-1)) {
-    return <h1 style={{color: "red", fontSize: "100px"}}>{item.name}</h1>
-  }
-})}
-</div> */}
-
   return(
     <section className="writers">
       <div className="container">
