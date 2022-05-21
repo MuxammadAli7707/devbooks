@@ -8,7 +8,7 @@ import Search from "./search/Search";
 export default function Main() {
   return(
     <>
-    <main>
+    <main id="#main">
       <div className="conatiner">
         <section className="main d-flex flex-column align-items-center">
           <Search />

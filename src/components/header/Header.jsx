@@ -3,32 +3,38 @@ import React from "react";
 import './Header.scss'
 //images
 import havatar from '../../assets/images/header-avatar.jpg'
+import { NavLink } from "react-router-dom";
 
 
 export default function Header() {
 
   let navg = [
     {
+      link: "/",
       title: "Bosh sahifa",
       class: true
     },
 
     {
-      title: "Nashr",
+      link: "adiblar",
+      title: "Adiblar",
       class: false
     },
 
     {
-      title: "Nazm",
+      link: "kitoblar",
+      title: "Kitoblar",
       class: false
     },
 
     {
+      link: "maqolalar",
       title: "Maqolalar",
       class: false
     },
 
     {
+      link: "forum",
       title: "Forum",
       class: false
     },
@@ -60,7 +66,11 @@ export default function Header() {
               {
                 navg.map((item, key) => {
                   return(
-                    <li key={key+82} onClick={navBtn} className={`header__item ${item.class ? "header__activ" : ""}`}><a className="header__link" href="/">{item.title}</a></li>
+                    <li key={key+82} className="header__item">
+                      <NavLink className={({ isActive }) =>
+                        isActive ? "header__link header__activ" : "header__link"
+                      } to={item.link}>{item.title}</NavLink>
+                    </li>
                   )
                 })
               }

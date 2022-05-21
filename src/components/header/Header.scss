@@ -1,5 +1,5 @@
 .header {
-  border: 1px solid #ffffff1a;
+  border-bottom: 1px solid #ffffff1a;
 
   &__logo {
     font-family: 'Rotterburg Stylish FREE';
@@ -19,7 +19,6 @@
   }
 
   &__item {
-    padding: 29px 0;
     margin-right: 44px;
 
     &:last-child {
@@ -28,12 +27,16 @@
   }
 
   &__link {
+    display: block;
+    border-bottom: 2px solid transparent;
+
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 144.4%;
     text-decoration: none;
     color: #fff;
+    padding: 29px 0;
     transition: all 0.3s linear;
 
     &:hover {

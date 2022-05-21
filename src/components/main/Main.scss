@@ -1,5 +1,8 @@
 .main {
   position: relative;
+  background-image: url("../../assets/images/ornament.svg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
 
   &__title {
     font-family: 'Rotterburg Stylish FREE';
@@ -9,21 +12,5 @@
     color: #c9ac8c;
     margin-top: -20px;
     margin-bottom: 30px;
-  }
-
-  &__ {
-
-  }
-
-  &__ {
-
-  }
-
-  &__ {
-
-  }
-
-  &__ {
-
   }
 }

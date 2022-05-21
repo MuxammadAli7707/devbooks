@@ -8,6 +8,11 @@
   list-style-type: none;
   padding-top: 48px;
 
+  &__link {
+    color: #fff;
+    text-decoration: none;
+  }
+
   &__item {
     width: 173px;
     height: 237px;
