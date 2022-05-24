@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //scss
 import './Category.scss'
 
@@ -25,19 +25,34 @@ let category = [
   },
 ]
 
-export default function Category() {
+export default function Category(props) {
+  const [cate, setCate] = useState([])
+  let cates = []
+  useEffect(() => {
+    setCate(category)
+  }, [])
 
   let btnClick = (e) => {
-    category.map(item => {
-      if(e.target.id == item.id) {
+    cate.map(item => {
+      if(e.target.id === item.id) {
         item.class = true
+        cates.push(item)
       }
       else {
         item.class = false
+        cates.push(item)
       }
     })
+    setCate(cates)
+
+    props.setNewObj(props.obj.filter(item => {
+      return item.category === e.target.id
+      console.log("ishladi")
+    }))
+
   }
 
+  // console.log(cate)
   return(
     <ul className="category d-flex">
       {category.map((item, key) => (

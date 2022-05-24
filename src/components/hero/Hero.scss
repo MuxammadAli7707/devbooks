@@ -1,9 +1,8 @@
-
 .hero {
   width: 100%;
   padding-top: 54px;
 
-  &__div {
+  &__main {
     width: 100%;
     overflow: hidden;
   }
@@ -13,7 +12,7 @@
     height: 350px;
   }
 
-  &__main {
+  &__item {
     width: 100%;
     background-image: url('../../assets/images/hero-back.png');
     background-repeat: no-repeat;
@@ -23,8 +22,9 @@
     padding: 45px 86px 100px;
   }
 
-  &__div2 {
+  &__itembox {
     width: 1290px;
+    transition: all 0.5s linear;
   }
 
   &__box {
@@ -53,6 +53,22 @@
 
   &__activ {
     background-color: #fff;
+  }
+
+  &__one {
+    transform: translateX(0);
+  }
+
+  &__two {
+    transform: translateX(-1290px);
+  }
+
+  &__three {
+    transform: translateX(-2580px);
+  }
+
+  &__four {
+    transform: translateX(-3870px);
   }
 
 }

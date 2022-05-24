@@ -2,15 +2,14 @@ import React from "react";
 //scss
 import './Card.scss'
 //images
-import Object from "../object/objects";
 import {Link} from "react-router-dom";
 
-
-export default function Card() {
+  
+export default function Card(props) {
   return(
     <ul className="cards d-flex">
       {
-        Object.map((item, key) => {
+        props.newObj.map((item, key) => {
           return(
             <Link className="cards__link" key={key+65} to={`Users/${item.id}`}>
               <li className="cards__item">

@@ -3,7 +3,7 @@ import React from "react";
 import './Header.scss'
 //images
 import havatar from '../../assets/images/header-avatar.jpg'
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 export default function Header() {
@@ -78,7 +78,8 @@ export default function Header() {
           </nav>
 
           <div className="header__usersbox d-flex justify-content-between align-items-center">
-            <button className="header__btn"><img src={havatar} alt="avatar" /></button>
+            <Link className="header__btn" to="/signup"><img src={havatar} alt="avatar" /></Link>
+            {/* <button className="header__btn"><img src={havatar} alt="avatar" /></button> */}
             <button className="header__btndown"><i className='bx bx-chevron-down header__icondown'></i></button>
           </div>
         </div>
