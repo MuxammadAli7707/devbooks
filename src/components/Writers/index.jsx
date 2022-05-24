@@ -3,7 +3,7 @@ import React from "react";
 import './Writers.scss'
 
 import { useLocation } from "react-router-dom";
-import obj from "../main/object/objects"
+import obj from "../../Books/Books"
 
 import imgs from '../../assets/images/object/qodiriy.jpg'
 
@@ -15,7 +15,7 @@ export default function Users() {
       <div className="container">
         {
           obj.map((item, key) => {
-            if(item.id === +location.pathname.split("/").at(-1)) {
+            if(item.id === location.pathname.split("/").at(-1)) {
               return(
                 <div key={key+98} className="writers__main d-flex justify-content-between">
                   <div className="writers__leftbox">
@@ -26,14 +26,14 @@ export default function Users() {
                     <div className="d-flex justify-content-between align-items-center">
                       <div className="">
                         <p className="writers__born">Tavallud sanasi</p>
-                        <p className="writers__birth">5-Avg 1941</p>
-                        <p className="writers__born">Toshkent, Uzbekistan</p>
+                        <p className="writers__birth">{item.bornDate}-{item.bornMonth} {item.born}</p>
+                        <p className="writers__born">{item.location}</p>
                       </div>
                       <span className="writers__birth">-</span>
                       <div className="">
                         <p className="writers__born">Tavallud sanasi</p>
-                        <p className="writers__birth">24-MAY 2013</p>
-                        <p className="writers__born">Toshkent, Uzbekistan</p>
+                        <p className="writers__birth">{item.diedDate}-{item.diedMonth} {item.died}</p>
+                        <p className="writers__born">{item.location}</p>
                       </div>
                     </div>
                   </div>
@@ -41,12 +41,26 @@ export default function Users() {
                     <h2 className="writers__title">{item.name}</h2>
                     <p className="writers__desc">{item.desc}</p>
                     <h3 className="writers__creation"><i className="bx bxs-bookmark writers__bookmark"></i> Ijod</h3>
-                    <p className="writers__creation-text">Yozuvchining ilk asari 1962-yilda „Poʻlat chavandoz“ nomida ocherklar toʻplami tarzida nashrdan chiqdi. Ammo yozuvchiga muvaffaqiyat keltirgan asar 1970-yilda nashr qilingan „Bahor qaytmaydi“ qissasi boʻldi.</p>
+                    <p className="writers__creation-text">{item.jobs}</p>
                     <div className="writers__worksbox d-flex justify-content-between align-items-center">
                       <h3 className="writers__work">Asarlari</h3>
                       <a className="writers__workall" href="/">Barchasini ko'rish</a>
                     </div>
                     <ul className="writers__work-list d-flex justify-content-between">
+                      {
+                        item.bookObj.map((book, keyd) => {
+                          return(
+                            <li key={keyd+23} className="writers__work-item">
+                            <div className="writers__work-imgbox">
+                              <img className="writers__work-img" src={book.bookImg} alt="" />
+                            </div>
+                            <h3 className="writers__work-name">{book.bookName}</h3>
+                            <p className="writers__work-comment"><i className='bx bxs-star writers__stars'></i> {book.bookRating} • 3400 ta fikrlar</p>
+                          </li>
+                          )
+                        })
+                      }
+
                       <li className="writers__work-item">
                         <div className="writers__work-imgbox">
                           <img className="writers__work-img" src={imgs} alt="" />

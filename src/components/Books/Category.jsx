@@ -1,37 +1,31 @@
 import React, { useEffect, useState } from "react";
 //scss
-import './Category.scss'
+import '../main/category/Category.scss'
 
 let category = [
   {
-    id: "barchasi",
-    name: "Barchasi",
+    id: "temuriylar",
+    name: "Temuriylar davri",
+    class: false
+  },
+  {
+    id: "jadid",
+    name: "Jadid adabiyoti",
     class: true
   },
-
   {
-    id: "biznes",
-    name: "Biznes",
+    id: "sovet",
+    name: "Sovet davri",
     class: false
   },
   {
-    id: "uzbek",
-    name: "O'zbek adabiyoti",
-    class: false
-  },
-  {
-    id: "Diniy",
-    name: "Diniy",
-    class: false
-  },
-  {
-    id: "jahon",
-    name: "Jahon",
+    id: "mustaqillik",
+    name: "Mustaqillik davri",
     class: false
   },
 ]
 
-export default function Category(props) {
+export default function CateBooks(props) {
   const [cate, setCate] = useState([])
   let cates = []
   useEffect(() => {
@@ -52,11 +46,8 @@ export default function Category(props) {
     setCate(cates)
 
     props.setNewObj(props.obj.filter(item => {
-      if(e.target.id === 'barchasi'){
-        return item
-      }
-
-      return item.genre === e.target.id
+      return item.category === e.target.id
+      console.log("ishladi")
     }))
 
   }

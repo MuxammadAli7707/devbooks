@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Card from "./card/Card";
-import Category from "./category/Category";
 //scss
-import './Main.scss'
-import Search from "./search/Search";
+import '../main/Main.scss'
+import Search from "../main/search/Search";
 import obj from '../../Books/Books.js'
+import Category from "./Category";
+import Hero from "../hero/Hero";
+import CardBooks from "./Card";
 
-export default function Main() {
+export default function Books() {
   const [newObj, setNewObj] = useState([]);
 
   useEffect(() => {
@@ -15,6 +16,7 @@ export default function Main() {
 
   return(
     <>
+    <Hero />
     <main id="#main">
       <div className="conatiner">
         <section className="main d-flex flex-column align-items-center">
@@ -24,12 +26,8 @@ export default function Main() {
             setNewObj={setNewObj}
           />
           <h2 className="main__title">Asosiy kategoriyalar</h2>
-          <Category
-            obj={obj}
-            newObj={newObj}
-            setNewObj={setNewObj}
-          />
-          <Card newObj={newObj}/>
+          <Category newObj={newObj}/>
+          <CardBooks newObj={newObj}/>
         </section>
       </div>
     </main>

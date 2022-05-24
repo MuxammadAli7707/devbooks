@@ -6,7 +6,6 @@ import './Sign.scss'
 import signup from '../../assets/images/signin.svg'
 
 export default function SignIn() {
-
   let inputHandler = (e) => {
     console.log(e)
   }
