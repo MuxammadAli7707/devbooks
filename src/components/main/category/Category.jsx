@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//scss
 import './Category.scss'
 
 let category = [
@@ -61,7 +60,6 @@ export default function Category(props) {
 
   }
 
-  // console.log(cate)
   return(
     <ul className="category d-flex">
       {category.map((item, key) => (

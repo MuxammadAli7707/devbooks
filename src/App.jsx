@@ -2,9 +2,8 @@ import {Route, Routes } from 'react-router-dom';
 import './App.css';
 import Adiblar from './components/Adiblar';
 import Books from './components/Books';
-import BooksInfo from './components/Books/BookInfo';
-import Forum from './components/Forum';
 import Header from './components/header/Header';
+import Hero from './components/hero/Hero';
 import Home from './components/Home/Home';
 import Maqolalar from './components/Maqolalar';
 import SignIn from './components/Sign/Signin';
@@ -18,10 +17,9 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}/>
-        {/* <Route path="/adiblar" element={<Adiblar />} /> */}
-        <Route path="/adiblar" element={<BooksInfo />} />
+        <Route path="/nazm" element={<Hero />} />
         <Route path="/maqolalar" element={<Maqolalar />} />
-        <Route path="/forum" element={<Forum />} />
+        <Route path="/forum" element={<SignUp />} />
         <Route path="Users/:id" element= {<Users/>}/>
         <Route path="/signin" element= {<SignIn />}/>
         <Route path="/signup" element= {<SignUp />}/>

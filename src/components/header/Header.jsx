@@ -1,89 +1,52 @@
 import React from "react";
-//scss
 import './Header.scss'
-//images
 import havatar from '../../assets/images/header-avatar.jpg'
 import { Link, NavLink } from "react-router-dom";
+const navbar = ["Bosh sahifa", "Kitoblar", "Nazm", "Maqolalar", "Forum"];
 
 
-export default function Header() {
-
-  let navg = [
-    {
-      link: "/",
-      title: "Bosh sahifa",
-      class: true
-    },
-
-    {
-      link: "adiblar",
-      title: "Adiblar",
-      class: false
-    },
-
-    {
-      link: "kitoblar",
-      title: "Kitoblar",
-      class: false
-    },
-
-    {
-      link: "maqolalar",
-      title: "Maqolalar",
-      class: false
-    },
-
-    {
-      link: "forum",
-      title: "Forum",
-      class: false
-    },
-  ]
-
-  let navBtn = (e) => {
-    e.preventDefault()
-    navg.map((item) => {
-      if(e.target.innerText === item.title) {
-        item.class = true
-        console.log("ishladi")
-      } else {
-        item.class = false
-        console.log("ishlamadi")
-      }
-    })
-  }
-
-  return(
+function Header() {
+  return (
     <header className="header">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
           <div className="header__logobox">
-            <a className="header__logo" href="/">Badiiyat</a>
+            <Link to="/" className="header__logo">Badiiyat</Link>  
           </div>
 
-          <nav className="header__nav">
+          <nav className="header__nav d-flex align-items-center">
             <ul className="header__list d-flex justify-content-between align-items-center">
-              {
-                navg.map((item, key) => {
-                  return(
-                    <li key={key+82} className="header__item">
-                      <NavLink className={({ isActive }) =>
-                        isActive ? "header__link header__activ" : "header__link"
-                      } to={item.link}>{item.title}</NavLink>
-                    </li>
-                  )
-                })
-              }
-            </ul>
-          </nav>
+              {navbar.map((nav, i) => {
+                return (
+                  <>
+                    <li className="header__item" key={i}>
+                      {nav === "Bosh sahifa" ? (
+                        <NavLink to={"/"} className='header__link'>
+                          {nav}
+                        </NavLink>
+                      ) : (
+                        <NavLink
+                        to={nav}
+                        className={'header__link'}
+                      >
+                        {nav}
+                      </NavLink>
+                      )}
 
+                    </li>
+                  </>
+                )
+              })}
+            </ul>
           <div className="header__usersbox d-flex justify-content-between align-items-center">
-            <Link className="header__btn" to="/signup"><img src={havatar} alt="avatar" /></Link>
-            {/* <button className="header__btn"><img src={havatar} alt="avatar" /></button> */}
+            <button className="header__btn"><img src={havatar} alt="avatar" /></button>
             <button className="header__btndown"><i className='bx bx-chevron-down header__icondown'></i></button>
           </div>
+          </nav>
+
         </div>
       </div>
     </header>
   )
 }
+export default Header

@@ -1,50 +1,41 @@
 .hero {
-  width: 100%;
   padding-top: 54px;
 
   &__main {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  &__list {
-    width: 1290px;
-    height: 350px;
-  }
-
-  &__item {
-    width: 100%;
-    background-image: url('../../assets/images/hero-back.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 21px;
-    padding: 45px 86px 100px;
-  }
-
-  &__itembox {
-    width: 1290px;
-    transition: all 0.5s linear;
+    position: relative;
   }
 
   &__box {
-    width: 337px;
+    display: flex;
+    border-radius: 21px;
   }
-
+  &__img {
+    width: 1290px;
+    border-radius: 21px;
+    height: 380px;
+  }
   &__title {
+    position: absolute;
+    padding-left: 86px;
+    padding-top: 40px;
+    top: 0;
     font-family: 'Rotterburg Stylish FREE';
-    font-style: normal;
-    font-size: 61px;
+    font-size: 50px;
     line-height: 67px;
     letter-spacing: 0.4px;
     color: #c9ac8c;
-    margin-bottom: 10px;
-
+    width: 337px;
+  }
+  &__btns {
+    position: absolute;
+    padding-left: 84px;
+    top: 75%;
+    z-index: 100;
   }
 
   &__btn {
     width: 57.39px;
-    height: 3px;
+    height: 5px;
     background-color: #ffffff99;
     border: none;
     border-radius: 10px;
@@ -54,21 +45,31 @@
   &__activ {
     background-color: #fff;
   }
+}
 
-  &__one {
-    transform: translateX(0);
-  }
+.to-firstSlide {
+  transform: translateX(0) !important;
+  transition: all 0.4s linear;
+}
 
-  &__two {
-    transform: translateX(-1290px);
-  }
+.to-secondSlide {
+  transform: translateX(-1290px) !important;
+  transition: all 0.4s linear;
+}
 
-  &__three {
-    transform: translateX(-2580px);
-  }
+.to-thirdSlide {
+  transform: translateX(-2580px) !important;
+  transition: all 0.4s linear;
+}
+.to-fourSlide {
+  transform: translateX(-3870px) !important;
+  transition: all 0.4s linear;
+}
 
-  &__four {
-    transform: translateX(-3870px);
-  }
-
+.active2 {
+  box-shadow: #354b4f 0px 1px 1px, #354b4f 0px 0px 0px 1px;
+  background-color: #192527;
+}
+.heros {
+  overflow-x: hidden;
 }

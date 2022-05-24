@@ -1,5 +1,4 @@
 import React from "react";
-//scss
 import './Writers.scss'
 
 import { useLocation } from "react-router-dom";

@@ -1,7 +1,5 @@
 import React from "react";
-//scss
 import './Search.scss'
-//images
 import searchicon from '../../../assets/images/search-icon.svg'
 
 export default function Search(props) {

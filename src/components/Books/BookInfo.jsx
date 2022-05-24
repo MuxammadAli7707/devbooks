@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//scss
 import './BookInfo.scss'
 
 import imgb from "../../assets/images/object/otkirhoshimov.jpg"

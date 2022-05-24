@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//scss
 import './Sign.scss'
-// images
 import signup from '../../assets/images/signin.svg'
 
 export default function SignIn() {
@@ -12,16 +10,17 @@ export default function SignIn() {
 
   return(
     <section className="sign">
-      <div className="container">
+      <div>
         <div className="sign__main d-flex">
           <div className="sign__imgbox">
             <img className="sign__img" src={signup} alt="" />
           </div>
           <div className="sign__rightbox">
+          <Link to="/"><i class='bx bx-home'> Home</i> </Link>
             <div className="sign__box">
-              <h2 className="sign__title">Sign In</h2>
+              <h2 className="sign__title">Sign in</h2>
               <p className="sign__desc">Already have an account? <Link className="sign__link" to="/signup">Sign up</Link> </p>
-              <form action="">
+              <form>
                 <label className="sign__label" htmlFor="upmail">
                   <input id="upmail" onChange={inputHandler} className="sign__input" type="text" placeholder="Email" />
                 </label>
