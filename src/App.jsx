@@ -10,13 +10,10 @@ import SignIn from './components/Sign/Signin';
 import SignUp from './components/Sign/Signup';
 import Users from './components/Writers';
 
-
-
 function App() {
   return(
     <>
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/nazm" element={<Hero />} />
